@@ -1,77 +1,83 @@
-# [LeafyLoot](https://leafyloot.netlify.com)
+# LeafyLoot
 
-![web-site](https://i.imgur.com/YvT9XxM.png)
+![LeafyLoot Frontend](https://i.imgur.com/YvT9XxM.png)
 
-Welcome to the LeafyLoot backend repository! This Node.js application is responsible for handling data storage, web scraping, and more.
+## Frontend
 
-## Overview
+### Overview
 
-LeafyLoot's backend is built with Node.js, and it stores data in a MongoDB database. Additionally, I have implemented a web scraping feature to retrieve data from Amazon's website, while ensuring I don't get banned by using an IP rotation service provided by Bright Data. To automate the scraping process, I've integrated a cron job.
+LeafyLoot's frontend is a dynamic React application styled using Tailwind CSS. The design, initially crafted in Figma, was converted into code with the aid of AI technology and further refined to ensure a responsive and functional website.
 
-## Features
+### Features
 
-- **Node.js**: The backend is developed using Node.js, ensuring a fast and efficient server.
-- **MongoDB**: All data is stored in a MongoDB database, providing a reliable data storage solution.
-- **Web Scraper**: I have implemented a web scraper to collect data from Amazon.
-- **Bright Data IP Rotation**: To prevent IP banning, I've integrated Bright Data's IP rotation service.
-- **Cron Job**: I've automated the data scraping process using a cron job.
+- **React with JavaScript**: Provides a dynamic user experience.
+- **Tailwind CSS**: Used for efficient styling.
+- **AI-Generated Design**: Initial design created in Figma, transformed into code using AI.
+- **Backend Integration**: Seamlessly interacts with the LeafyLoot backend for data retrieval and management.
 
-## Getting Started
+### Getting Started
 
-To get started with the backend, follow these steps:
+To get started with the frontend:
 
 1. Clone this repository.
-2. Install the required dependencies using `npm install`.
-3. Set up your MongoDB connection details.
-4. Configure the Bright Data IP rotation service.
+2. Install dependencies with `npm install`.
+3. Configure the backend API endpoint to connect to your LeafyLoot backend.
+4. Start the development server using `npm start`.
+
+### Usage
+
+#### Home Page
+
+Upon opening the app, the Home Page displays a list of products.
+
+1. **Enter Amazon URL**: Add an Amazon product URL in the product addition form.
+2. **Scrape Product Data**: Click "Scrape" to fetch details like name, price, and more.
+3. **View Product Details**: After scraping, view detailed product information on the Product Page.
+
+#### Product Page
+
+- **Track Price**: Enter your email for price change notifications.
+- **Product Details**: Explore product descriptions, images, and specifications.
+- **Discover Similar Products**: Find products similar to the tracked one.
+
+## Backend
+
+### Overview
+
+LeafyLoot's backend, built with Node.js, stores data in MongoDB. It includes a web scraper for data retrieval from Amazon, implementing Bright Data's IP rotation for security and a cron job for automation.
+
+### Features
+
+- **Node.js**: Provides a fast server environment.
+- **MongoDB**: Ensures reliable data storage.
+- **Web Scraper**: Gathers data from Amazon.
+- **Bright Data IP Rotation**: Prevents IP banning.
+- **Cron Job**: Automates data scraping processes.
+
+### Getting Started
+
+To start using the backend:
+
+1. Clone this repository.
+2. Install dependencies using `npm install`.
+3. Configure MongoDB connection details.
+4. Set up Bright Data IP rotation.
 5. Start the server using `npm start`.
 
-## API Documentation
+### API Documentation
 
-This documentation provides details about the API endpoints available in the LeafyLoot backend for version 1 (`api/v1`).
+#### Products API Endpoints
 
-## Products API Endpoint
+- `GET /api/v1/products/`: Get all products.
+- `GET /api/v1/products/:productId`: Get a specific product by ID.
+- `GET /api/v1/products/similar-to/:productId`: Get similar products.
+- `POST /api/v1/products/scrape`: Scrape and save product data.
+- `POST /api/v1/products/add-email`: Add user email for product updates.
 
-### Get All Products
+#### Cron API Endpoint
 
-- **Endpoint**: `GET /api/v1/products/`
-- **Description**: Get a list of all products.
-- **Response**: A JSON array of products.
+- `GET /api/v1/cron/`: Execute scheduled tasks.
 
-### Get Product by ID
+---
 
-- **Endpoint**: `GET /api/v1/products/:productId`
-- **Description**: Get a specific product by its unique ID.
-- **Parameters**:
-  - `productId` (string): The unique ID of the product.
-- **Response**: A JSON object representing the product.
-
-### Get Similar Products
-
-- **Endpoint**: `GET /api/v1/products/similar-to/:productId`
-- **Description**: Get a list of products that are similar to the specified product.
-- **Parameters**:
-  - `productId` (string): The unique ID of the product.
-- **Response**: A JSON array of similar products.
-
-### Scrape and Save Product
-
-- **Endpoint**: `POST /api/v1/products/scrape`
-- **Description**: Scrapes product data from a source and saves it to the database.
-- **Request Body**: A JSON object with data required for scraping.
-- **Response**: A JSON object confirming the success of the scraping and saving process.
-
-### Add User Email to Product
-
-- **Endpoint**: `POST /api/v1/products/add-email`
-- **Description**: Add a user's email to receive updates about a specific product.
-- **Request Body**: A JSON object with user email and product information.
-- **Response**: A JSON object confirming the addition of the user's email to the product.
-
-## Cron API Endpoint
-
-### Execute Cron Job
-
-- **Endpoint**: `GET /api/v1/cron/`
-- **Description**: Trigger a cron job to perform scheduled tasks.
-- **Response**: A JSON object indicating the status and results of the cron job.
+The LeafyLoot application combines the frontend's intuitive user interface with the backend's robust data handling and automation, delivering a seamless user experience.
