@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+  @apply leading-[normal] m-0;
+}
+*,
+::before,
+::after {
+  border-width: 0;
+}
+
+html {
+  font-size: calc(100vw / 1920 * 16);
+}
+
+@media only screen and (max-width: 2560px) {
+  html {
+    font-size: calc(100vw / 2560 * 16);
+    margin: 0 16%;
+  }
+}
+
+@media only screen and (max-width: 1920px) {
+  html {
+    font-size: calc(100vw / 1920 * 16);
+    margin: 0;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  html {
+    font-size: calc(100vw / 1200 * 16);
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  html {
+    font-size: calc(100vw / 960 * 16);
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  html {
+    font-size: calc(100vw / 500 * 16);
+  }
+}
