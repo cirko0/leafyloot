@@ -12,7 +12,9 @@ app.enable("trust proxy");
 
 app.use(
   cors({
-    origin: "https://leafyloot.netlify.app",
+    origin: ["https://leafyloot.netlify.app", "http://localhost:3000"],
+    methods: "GET, POST, PUT, DELETE, OPTIONS",
+    allowedHeaders: "Content-Type, Authorization",
   })
 );
 
