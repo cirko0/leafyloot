@@ -1,5 +1,7 @@
 # [LeafyLoot](https://leafyloot.netlify.com)
 
+![web-site](https://i.imgur.com/YvT9XxM.png)
+
 Welcome to the LeafyLoot backend repository! This Node.js application is responsible for handling data storage, web scraping, and more.
 
 ## Overview

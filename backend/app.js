@@ -12,7 +12,7 @@ app.enable("trust proxy");
 
 app.use(
   cors({
-    origin: "https://leafyloot.netlify.app",
+    origin: "https://leafyloost.netlify.app",
   })
 );
 
