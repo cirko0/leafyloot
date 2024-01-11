@@ -35,11 +35,17 @@ const Hero = () => {
 
     try {
       setIsLoading(true);
-      const res = await axios.post("products/scrape", {
-        productUrl: url,
-      });
 
-      navigate(`/product/${res.data.newProduct._id}`);
+      return notify(
+        "This feature doesn't work due to changes on amazon site.",
+        "error"
+      );
+
+      // const res = await axios.post("products/scrape", {
+      //   productUrl: url,
+      // });
+
+      // navigate(`/product/${res.data.newProduct._id}`);
     } catch (error) {
       notify(error.response.data.message, "error");
     } finally {
