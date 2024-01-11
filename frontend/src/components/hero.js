@@ -1,13 +1,13 @@
 import { useState } from "react";
 import { BiRightArrowAlt } from "react-icons/bi";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import HeroCarousel from "./hero-carousel";
-import axios from "../api/axios";
+// import axios from "../api/axios";
 import notify from "../utils/notify";
 
 const Hero = () => {
   const [url, setUrl] = useState("");
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const [isLoading, setIsLoading] = useState(false);
 
   const isValidAmazonProductUrl = (url) => {
