@@ -2,6 +2,8 @@
 
 ![LeafyLoot Frontend](https://i.imgur.com/YvT9XxM.png)
 
+LeafyLoot is an innovative application designed to enhance your online shopping endeavors by seamlessly integrating cutting-edge technology into a user-friendly interface. My platform combines the efficiency of AI-generated frontend design with a powerful backend infrastructure to offer a great shopping experience.
+
 ## Frontend
 
 ### Overview
